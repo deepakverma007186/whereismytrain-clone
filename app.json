@@ -28,7 +28,21 @@
       "favicon": "./src/assets/images/icon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "raleway100": "./src/assets/fonts/Raleway-Thin.ttf",
+          "raleway200": "./src/assets/fonts/Raleway-ExtraLight.ttf",
+          "raleway300": "./src/assets/fonts/Raleway-Light.ttf",
+          "raleway400": "./src/assets/fonts/Raleway-Regular.ttf",
+          "raleway500": "./src/assets/fonts/Raleway-Medium.ttf",
+          "raleway600": "./src/assets/fonts/Raleway-SemiBold.ttf",
+          "raleway700": "./src/assets/fonts/Raleway-Bold.ttf",
+          "raleway800": "./src/assets/fonts/Raleway-ExtraBold.ttf",
+          "raleway900": "./src/assets/fonts/Raleway-Black.ttf"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
