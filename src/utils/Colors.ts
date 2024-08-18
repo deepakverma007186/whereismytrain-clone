@@ -1,4 +1,4 @@
-const primary = "#1668e4";
+const primary = "#1b579c";
 const secondary = "#0bacf4";
 const tertiary = "#8fb6f9";
 

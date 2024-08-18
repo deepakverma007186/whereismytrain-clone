@@ -1,7 +1,12 @@
-import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
-import { useEffect } from "react";
+import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
+import { useEffect } from "react";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { COLORS } from "../utils/Colors";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { StatusBar } from "react-native";
+import { moderateScaleVertical } from "../utils/Responsive";
 
 export default function RootLayout() {
   const [loaded] = useFonts({
@@ -25,9 +30,22 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
+  const paddingTop =
+    StatusBar.currentHeight == undefined
+      ? -moderateScaleVertical(40)
+      : -StatusBar.currentHeight;
   return (
-    <Stack>
-      <Stack.Screen name="index" />
-    </Stack>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, paddingTop }}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor={`${COLORS.primary}`}
+        />
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="index" />
+          <Stack.Screen name="(drawer)" />
+        </Stack>
+      </SafeAreaView>
+    </GestureHandlerRootView>
   );
 }
