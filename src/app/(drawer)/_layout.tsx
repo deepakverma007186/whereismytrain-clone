@@ -20,8 +20,8 @@ export default function _Layout() {
     <Drawer
       screenOptions={{
         drawerPosition: "left",
-        drawerType: "permanent",
-        // drawerType: "front",
+        // drawerType: "permanent",
+        drawerType: "front",
         drawerStyle: {
           backgroundColor: COLORS.primary,
           width: width * 0.84,
