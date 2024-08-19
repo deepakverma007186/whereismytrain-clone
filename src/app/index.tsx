@@ -2,9 +2,16 @@ import { Text, View } from "react-native";
 import { FONT } from "../utils/CommonStyles";
 import { textScale } from "../utils/Responsive";
 import { CustomText } from "../components/CustomText";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
+import { useEffect } from "react";
 
-export default function Index() {
+export default function SplashScreen() {
+  useEffect(() => {
+    setTimeout(() => {
+      router.replace("/(drawer)/timetable");
+    }, 2000);
+  }, []);
+
   return (
     <View
       style={{

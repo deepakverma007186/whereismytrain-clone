@@ -31,6 +31,12 @@ export default function _Layout() {
           fontFamily: FONT.raleway600,
           fontSize: textScale(18),
         },
+        drawerItemStyle: {
+          marginHorizontal: 0,
+          paddingHorizontal: moderateScale(16),
+          borderRadius: 0,
+        },
+        drawerActiveBackgroundColor: "rgba(17, 33, 52, 0.2)",
       }}
       drawerContent={(props) => <DrawerUpperSection {...props} />}
     >
